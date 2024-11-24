@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Household builder</title>
+    <style>
+        .debug {
+            font-family: monospace;
+            border: 1px solid black;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Household Builder</h1>
+
+    <div class="builder">
+        <ol class="household"></ol>
+        <form>
+            <div class="field">
+                <label class="label" for="age">Age</label>
+
+                <div class="control">
+                    <input class="input" type="number" name="age" id="age"/>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="rel">Relationship</label>
+                <div class="select">
+                    <select name="rel" id="rel">
+                        <option value="" selected disabled>---</option>
+                        <option value="self">Self</option>
+                        <option value="spouse">Spouse</option>
+                        <option value="child">Child</option>
+                        <option value="parent">Parent</option>
+                        <option value="grandparent">Grandparent</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label checkbox" for="smoker">Smoker?
+                    <input type="checkbox" name="smoker" id="smoker"/>
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button class="button info">Add</button>
+                <button class="button success" type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <pre class="debug"></pre>
+</div>
+
+<script src="./index.js"></script>
+</body>
+</html>
